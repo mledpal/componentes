@@ -40,31 +40,40 @@ body {
 	opacity: 0;
 	z-index: 1;
 	width: auto;
-	height: 100px;
+	height: 200px;
 	object-fit: cover;
 }
 
 .aparecerTexto {
-	animation: aparecerTexto 1s ease-out forwards;
+	animation: aparecerTexto 1500ms forwards;
+	animation-timing-function: cubic-bezier(.71,.37,.31,.94)
 }
 
 @keyframes aparecerTexto {
 	0% {
+		transform: translate(100vw, 100vh) rotate(-90deg);
 		opacity: 0;
 	}
+	50%{
+		opacity: .1;
+	}
 	100% {
+		transform: translate(0, 0) rotate(0deg);
 		opacity: 1;
 	}
 }
 
 .desaparecerTexto {
-	animation: desaparecerTexto 2s ease-out forwards;
+	animation: desaparecerTexto 2s forwards;
+	animation-timing-function: cubic-bezier(.71,.37,.31,.94)
 }
 @keyframes desaparecerTexto {
 	0% {
+		transform: translate(0, 0) rotate(0deg);
 		opacity: 1;
 	}
 	100% {
+		transform: translate(-100vw, -100vh) rotate(90deg);
 		opacity: 0;
 	}
 }
