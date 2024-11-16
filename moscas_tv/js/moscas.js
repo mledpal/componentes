@@ -22,9 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	const filas = Math.floor(alto / ancho_div);
 
-	// Definir colores del degradado
+	// TVEO TELEVISIÓN
 	const startColor = [102, 195, 207]; // RGB de var(--color-azul-claro)
 	const endColor = [9, 68, 98]; // RGB de var(--color-azul-oscuro)
+
+	// FPV EN JAÉN
+	// const startColor = [77, 211, 39]; 
+	// const endColor = [1, 1, 1]; 
 
 	for (let i = 0; i < numero_columnas * filas; i++) {
 		const div = document.createElement("div");
